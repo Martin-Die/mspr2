@@ -1,0 +1,23 @@
+# Ignorer le dossier datasets mais pas son contenu
+!datasets/
+datasets/*
+!datasets/*.csv
+
+# Python
+__pycache__/
+*.pyc
+*.pyo
+*.pyd
+venv/
+.env
+
+# Jupyter notebooks checkpoints
+.ipynb_checkpoints/
+
+# OS
+.DS_Store
+Thumbs.db
+
+# Autres dossiers de sortie
+output/
+exploration_results/ 

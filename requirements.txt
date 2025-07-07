@@ -1,0 +1,7 @@
+pandas>=1.5
+numpy>=1.23
+scikit-learn>=1.2
+matplotlib>=3.6
+sqlalchemy>=1.4
+# Pour la connexion à PostgreSQL (optionnel, commenter si non utilisé)
+psycopg2-binary>=2.9 
