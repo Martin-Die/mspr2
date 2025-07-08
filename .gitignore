@@ -1,24 +1,140 @@
-# Ignorer le dossier datasets mais pas son contenu
-!datasets/
+# ========================================
+# GITIGNORE - MSPR2 Project
+# ========================================
+
+# ========================================
+# DONNÉES ET EXTRACTION
+# ========================================
+
+# Dossier datasets - garder le dossier, ignorer le contenu
 datasets/*
-!datasets/*.csv
-datasets/*.csv
+!datasets/.gitkeep
 
-# Python
+# Dossier extracted_csv - garder le dossier, ignorer le contenu
+extracted_csv/*
+!extracted_csv/.gitkeep
+
+# ========================================
+# RÉSULTATS ET SORTIES
+# ========================================
+
+# Dossier exploration_results - garder le dossier, ignorer le contenu
+exploration_results/*
+!exploration_results/.gitkeep
+
+# Dossier output - garder le dossier, ignorer le contenu
+output/*
+!output/.gitkeep
+
+# ========================================
+# PYTHON
+# ========================================
+
+# Bytecode Python
 __pycache__/
-*.pyc
-*.pyo
-*.pyd
-venv/
-.env
+*.py[cod]
+*$py.class
 
-# Jupyter notebooks checkpoints
+# Distribution / packaging
+*.so
+.Python
+build/
+develop-eggs/
+dist/
+downloads/
+eggs/
+.eggs/
+lib/
+lib64/
+parts/
+sdist/
+var/
+wheels/
+*.egg-info/
+.installed.cfg
+*.egg
+
+# Environnements virtuels
+venv/
+env/
+ENV/
+.venv/
+.env/
+
+# ========================================
+# JUPYTER NOTEBOOKS
+# ========================================
+
+# Checkpoints Jupyter
 .ipynb_checkpoints/
 
-# OS
-.DS_Store
-Thumbs.db
+# ========================================
+# SYSTÈME D'EXPLOITATION
+# ========================================
 
-# Autres dossiers de sortie
-output/
-exploration_results/ 
+# macOS
+.DS_Store
+.AppleDouble
+.LSOverride
+
+# Windows
+Thumbs.db
+ehthumbs.db
+Desktop.ini
+$RECYCLE.BIN/
+
+# Linux
+*~
+
+# ========================================
+# ÉDITEURS ET IDEs
+# ========================================
+
+# VS Code
+.vscode/
+*.code-workspace
+
+# PyCharm
+.idea/
+*.iml
+*.ipr
+*.iws
+
+# Sublime Text
+*.sublime-project
+*.sublime-workspace
+
+# Vim
+*.swp
+*.swo
+*~
+
+# ========================================
+# LOGS ET FICHIERS TEMPORAIRES
+# ========================================
+
+# Logs
+*.log
+logs/
+
+# Fichiers temporaires
+*.tmp
+*.temp
+temp/
+tmp/
+
+# ========================================
+# DONNÉES SENSIBLES
+# ========================================
+
+# Variables d'environnement
+.env
+.env.local
+.env.production
+.env.staging
+
+# Clés API et secrets
+*.key
+*.pem
+secrets/
+config/secrets.json 

@@ -1,0 +1,2 @@
+# Ce fichier permet de conserver le dossier exploration_results dans Git
+# même s'il est vide ou si son contenu est ignoré 
