@@ -255,12 +255,16 @@ def main():
     extracted_dir = Path(EXTRACTED_CSV_DIR)
     if not extracted_dir.exists():
         print(f"❌ Le dossier {EXTRACTED_CSV_DIR} n'existe pas.")
+        print("💡 Veuillez d'abord exécuter extract.py pour extraire les fichiers compressés.")
+        print("   Commande : python ../etl_steps/extract.py")
         return
     
     csv_files = list(extracted_dir.rglob("*.csv"))
     
     if not csv_files:
         print("❌ Aucun fichier CSV trouvé.")
+        print("💡 Veuillez d'abord exécuter extract.py pour extraire les fichiers compressés.")
+        print("   Commande : python ../etl_steps/extract.py")
         return
     
     print(f"📁 {len(csv_files)} fichier(s) CSV trouvé(s)")

@@ -4,6 +4,12 @@ Ce dossier contient une suite complète d'outils d'analyse de données pour expl
 
 ## 🚀 Démarrage Rapide
 
+### 0. Vérification de l'État du Projet (Recommandé en premier)
+```bash
+python check_setup.py
+```
+Ce script vérifie les prérequis et vous guide pour la configuration.
+
 ### 1. Lanceur Principal (Recommandé)
 ```bash
 python lanceur_analyses.py
@@ -30,9 +36,28 @@ python analyse_categorielle.py
 python analyse_temporelle.py
 ```
 
+## ⚠️ Prérequis Importants
+
+**Avant d'exécuter les analyses, assurez-vous que :**
+
+1. **L'extraction a été effectuée** : Le dossier `../extracted_csv` doit contenir des fichiers CSV
+2. **Les dépendances sont installées** : pandas, numpy, matplotlib, seaborn, scipy
+
+Si vous obtenez une erreur "Le dossier ../extracted_csv n'existe pas", exécutez d'abord :
+```bash
+python ../etl_steps/extract.py
+```
+
 ## 📋 Scripts Disponibles
 
-### 1. `lanceur_analyses.py` 🎯
+### 1. `check_setup.py` 🔍
+**Script de vérification et guide d'initialisation**
+- Vérifie les dépendances Python
+- Contrôle l'état d'extraction des données
+- Guide l'utilisateur pour la configuration
+- Recommande les prochaines étapes
+
+### 2. `lanceur_analyses.py` 🎯
 **Script principal recommandé**
 - Interface interactive pour toutes les analyses
 - Vérification automatique des prérequis
