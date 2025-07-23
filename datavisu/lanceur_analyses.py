@@ -10,7 +10,7 @@ import time
 from pathlib import Path
 
 # Configuration
-EXTRACTED_CSV_DIR = '../extracted_csv'
+EXTRACTED_CSV_DIR = './extracted_csv'
 SCRIPTS_DIR = '.'
 
 def check_prerequisites():
@@ -39,7 +39,7 @@ def list_available_scripts():
         '1': {
             'name': 'exploration_csv.py',
             'description': 'Exploration de base des données CSV',
-            'output_dir': '../exploration_results'
+            'output_dir': './exploration_results'
         },
         '2': {
             'name': 'analyse_complete.py',

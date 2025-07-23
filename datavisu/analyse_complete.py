@@ -13,8 +13,8 @@ import warnings
 warnings.filterwarnings('ignore')
 
 # Configuration
-EXTRACTED_CSV_DIR = '../extracted_csv'
-RESULTS_DIR = '../exploration_results'
+EXTRACTED_CSV_DIR = './extracted_csv'
+RESULTS_DIR = './exploration_results'
 COMPLETE_DIR = 'analyse_complete'
 
 def create_complete_directory():
@@ -256,7 +256,7 @@ def main():
     if not extracted_dir.exists():
         print(f"❌ Le dossier {EXTRACTED_CSV_DIR} n'existe pas.")
         print("💡 Veuillez d'abord exécuter extract.py pour extraire les fichiers compressés.")
-        print("   Commande : python ../etl_steps/extract.py")
+        print("   Commande : python ./etl_steps/extract.py")
         return
     
     csv_files = list(extracted_dir.rglob("*.csv"))
@@ -264,7 +264,7 @@ def main():
     if not csv_files:
         print("❌ Aucun fichier CSV trouvé.")
         print("💡 Veuillez d'abord exécuter extract.py pour extraire les fichiers compressés.")
-        print("   Commande : python ../etl_steps/extract.py")
+        print("   Commande : python ./etl_steps/extract.py")
         return
     
     print(f"📁 {len(csv_files)} fichier(s) CSV trouvé(s)")

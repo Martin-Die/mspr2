@@ -9,14 +9,14 @@ from pathlib import Path
 
 def check_extraction_status():
     """Vérifie si l'extraction a été effectuée."""
-    extracted_dir = Path("../extracted_csv")
-    datasets_dir = Path("../datasets")
+    extracted_dir = Path("./extracted_csv")
+    datasets_dir = Path("./datasets")
     
     print("🔍 Vérification de l'état d'extraction...")
     
     # Vérifier si le dossier datasets existe
     if not datasets_dir.exists():
-        print("❌ Le dossier ../datasets n'existe pas.")
+        print("❌ Le dossier ./datasets n'existe pas.")
         print("💡 Veuillez créer le dossier datasets et y placer vos fichiers compressés.")
         return False
     
@@ -25,15 +25,15 @@ def check_extraction_status():
     compressed_files = [f for f in datasets_files if f.is_file() and any(f.name.endswith(ext) for ext in ['.gz', '.zip', '.tar', '.bz2'])]
     
     if not compressed_files:
-        print("⚠️ Aucun fichier compressé trouvé dans ../datasets")
+        print("⚠️ Aucun fichier compressé trouvé dans ./datasets")
         print("💡 Veuillez placer vos fichiers .gz, .zip, .tar dans le dossier datasets")
         return False
     
-    print(f"✅ {len(compressed_files)} fichier(s) compressé(s) trouvé(s) dans ../datasets")
+    print(f"✅ {len(compressed_files)} fichier(s) compressé(s) trouvé(s) dans ./datasets")
     
     # Vérifier si l'extraction a été faite
     if not extracted_dir.exists():
-        print("❌ Le dossier ../extracted_csv n'existe pas.")
+        print("❌ Le dossier ./extracted_csv n'existe pas.")
         print("💡 L'extraction n'a pas encore été effectuée.")
         return False
     
@@ -41,11 +41,11 @@ def check_extraction_status():
     csv_files = list(extracted_dir.rglob("*.csv"))
     
     if not csv_files:
-        print("❌ Aucun fichier CSV trouvé dans ../extracted_csv")
+        print("❌ Aucun fichier CSV trouvé dans ./extracted_csv")
         print("💡 L'extraction n'a pas encore été effectuée ou a échoué.")
         return False
     
-    print(f"✅ {len(csv_files)} fichier(s) CSV trouvé(s) dans ../extracted_csv")
+    print(f"✅ {len(csv_files)} fichier(s) CSV trouvé(s) dans ./extracted_csv")
     
     # Afficher les tailles des fichiers
     total_size = sum(f.stat().st_size for f in csv_files)
@@ -86,7 +86,7 @@ def show_next_steps():
     
     if not check_extraction_status():
         print("\n1️⃣ EXTRACTION DES DONNÉES :")
-        print("   python ../etl_steps/extract.py")
+        print("   python ./etl_steps/extract.py")
         print("   (Cela va extraire les fichiers compressés en CSV)")
         return
     

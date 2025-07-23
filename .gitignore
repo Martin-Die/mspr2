@@ -138,3 +138,6 @@ tmp/
 *.pem
 secrets/
 config/secrets.json 
+
+
+analyses_categorielles
