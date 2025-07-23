@@ -37,27 +37,27 @@ def list_available_scripts():
     """Liste les scripts d'analyse disponibles."""
     scripts = {
         '1': {
-            'name': 'exploration_csv.py',
+            'name': '2_exploration_csv.py',
             'description': 'Exploration de base des données CSV',
             'output_dir': './exploration_results'
         },
         '2': {
-            'name': 'analyse_complete.py',
+            'name': '3_analyse_complete.py',
             'description': 'Analyse complète avec aperçu général',
             'output_dir': 'analyse_complete'
         },
         '3': {
-            'name': 'analyse_statistique.py',
+            'name': '4_analyse_statistique.py',
             'description': 'Analyses statistiques avancées (corrélations, outliers, distributions)',
             'output_dir': 'analyses_statistiques'
         },
         '4': {
-            'name': 'analyse_categorielle.py',
+            'name': '5_analyse_categorielle.py',
             'description': 'Analyses des variables catégorielles (distributions, associations)',
             'output_dir': 'analyses_categorielles'
         },
         '5': {
-            'name': 'analyse_temporelle.py',
+            'name': '6_analyse_temporelle.py',
             'description': 'Analyses temporelles et séries temporelles',
             'output_dir': 'analyses_temporelles'
         }

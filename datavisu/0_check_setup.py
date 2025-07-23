@@ -91,20 +91,20 @@ def show_next_steps():
         return
     
     print("\n2️⃣ EXPLORATION DE BASE :")
-    print("   python exploration_csv.py")
+    print("   python 2_exploration_csv.py")
     print("   (Analyse rapide de la structure des données)")
     
     print("\n3️⃣ ANALYSE COMPLÈTE :")
-    print("   python analyse_complete.py")
+    print("   python 3_analyse_complete.py")
     print("   (Aperçu général et résumé des données)")
     
     print("\n4️⃣ ANALYSES SPÉCIALISÉES :")
-    print("   python analyse_statistique.py    # Corrélations, outliers")
-    print("   python analyse_categorielle.py   # Variables catégorielles")
-    print("   python analyse_temporelle.py     # Séries temporelles")
+    print("   python 4_analyse_statistique.py    # Corrélations, outliers")
+    print("   python 5_analyse_categorielle.py   # Variables catégorielles")
+    print("   python 6_analyse_temporelle.py     # Séries temporelles")
     
     print("\n5️⃣ LANCEUR INTERACTIF :")
-    print("   python lanceur_analyses.py")
+    print("   python 1_lanceur_analyses.py")
     print("   (Menu interactif pour toutes les analyses)")
 
 def main():

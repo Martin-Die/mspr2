@@ -6,13 +6,13 @@ Ce dossier contient une suite complète d'outils d'analyse de données pour expl
 
 ### 0. Vérification de l'État du Projet (Recommandé en premier)
 ```bash
-python check_setup.py
+python 0_check_setup.py
 ```
 Ce script vérifie les prérequis et vous guide pour la configuration.
 
 ### 1. Lanceur Principal (Recommandé)
 ```bash
-python lanceur_analyses.py
+python 1_lanceur_analyses.py
 ```
 Le lanceur vous guide à travers toutes les analyses disponibles avec un menu interactif.
 
@@ -21,19 +21,19 @@ Vous pouvez également exécuter chaque script individuellement :
 
 ```bash
 # Analyse complète (recommandé en premier)
-python analyse_complete.py
+python 3_analyse_complete.py
 
 # Exploration de base
-python exploration_csv.py
+python 2_exploration_csv.py
 
 # Analyses statistiques avancées
-python analyse_statistique.py
+python 4_analyse_statistique.py
 
 # Analyses des variables catégorielles
-python analyse_categorielle.py
+python 5_analyse_categorielle.py
 
 # Analyses temporelles
-python analyse_temporelle.py
+python 6_analyse_temporelle.py
 ```
 
 ## ⚠️ Prérequis Importants
@@ -50,21 +50,21 @@ python ../etl_steps/extract.py
 
 ## 📋 Scripts Disponibles
 
-### 1. `check_setup.py` 🔍
+### 1. `0_check_setup.py` 🔍
 **Script de vérification et guide d'initialisation**
 - Vérifie les dépendances Python
 - Contrôle l'état d'extraction des données
 - Guide l'utilisateur pour la configuration
 - Recommande les prochaines étapes
 
-### 2. `lanceur_analyses.py` 🎯
+### 2. `1_lanceur_analyses.py` 🎯
 **Script principal recommandé**
 - Interface interactive pour toutes les analyses
 - Vérification automatique des prérequis
 - Exécution orchestrée de toutes les analyses
 - Gestion des erreurs et rapports de progression
 
-### 2. `analyse_complete.py` 📊
+### 2. `3_analyse_complete.py` 📊
 **Analyse d'aperçu général**
 - Résumé complet de chaque fichier CSV
 - Visualisations des valeurs manquantes
@@ -74,7 +74,7 @@ python ../etl_steps/extract.py
 
 **Sortie :** Dossier `analyse_complete/`
 
-### 3. `exploration_csv.py` 🔍
+### 3. `2_exploration_csv.py` 🔍
 **Exploration de base des données**
 - Informations générales sur les fichiers
 - Structure des données
@@ -84,7 +84,7 @@ python ../etl_steps/extract.py
 
 **Sortie :** Dossier `../exploration_results/`
 
-### 4. `analyse_statistique.py` 📈
+### 4. `4_analyse_statistique.py` 📈
 **Analyses statistiques avancées**
 - Matrices de corrélation avec heatmaps
 - Détection d'outliers (méthode IQR)
@@ -94,7 +94,7 @@ python ../etl_steps/extract.py
 
 **Sortie :** Dossier `analyses_statistiques/`
 
-### 5. `analyse_categorielle.py` 📊
+### 5. `5_analyse_categorielle.py` 📊
 **Analyses des variables catégorielles**
 - Distributions des variables catégorielles
 - Tests de chi-carré entre variables
@@ -104,7 +104,7 @@ python ../etl_steps/extract.py
 
 **Sortie :** Dossier `analyses_categorielles/`
 
-### 6. `analyse_temporelle.py` 📅
+### 6. `6_analyse_temporelle.py` 📅
 **Analyses temporelles et séries temporelles**
 - Détection automatique des colonnes de dates
 - Tendances temporelles

@@ -237,9 +237,9 @@ def generate_master_summary(all_files_summaries):
             f.write(f"  - Données manquantes : {summary['missing_data_percentage']:.1f}%\n")
         
         f.write(f"\n🎯 RECOMMANDATIONS GLOBALES\n")
-        f.write(f"  ✅ Exécuter analyse_statistique.py pour les corrélations et outliers\n")
-        f.write(f"  ✅ Exécuter analyse_categorielle.py pour les variables catégorielles\n")
-        f.write(f"  ✅ Exécuter analyse_temporelle.py pour les séries temporelles\n")
+        f.write(f"  ✅ Exécuter 4_analyse_statistique.py pour les corrélations et outliers\n")
+        f.write(f"  ✅ Exécuter 5_analyse_categorielle.py pour les variables catégorielles\n")
+        f.write(f"  ✅ Exécuter 6_analyse_temporelle.py pour les séries temporelles\n")
         f.write(f"  ✅ Consulter les rapports individuels pour chaque fichier\n")
     
     print(f"📋 Résumé maître généré : {master_path}")
@@ -302,9 +302,9 @@ def main():
     print(f"   - Résultats dans : {COMPLETE_DIR}")
     print(f"\n📋 Prochaines étapes recommandées :")
     print(f"   1. Consulter le résumé maître : {COMPLETE_DIR}/00_master_summary.txt")
-    print(f"   2. Exécuter analyse_statistique.py pour les analyses avancées")
-    print(f"   3. Exécuter analyse_categorielle.py pour les variables catégorielles")
-    print(f"   4. Exécuter analyse_temporelle.py pour les séries temporelles")
+    print(f"   2. Exécuter 4_analyse_statistique.py pour les analyses avancées")
+    print(f"   3. Exécuter 5_analyse_categorielle.py pour les variables catégorielles")
+    print(f"   4. Exécuter 6_analyse_temporelle.py pour les séries temporelles")
 
 if __name__ == "__main__":
     main() 
