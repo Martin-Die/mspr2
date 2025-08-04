@@ -2,6 +2,8 @@ import pandas as pd
 import os
 from sklearn.decomposition import PCA
 import matplotlib.pyplot as plt
+from sklearn.impute import SimpleImputer
+
 
 INPUT_CSV = os.path.join('model_ia_steps', 'features_normalized.csv')
 OUTPUT_CSV = os.path.join('model_ia_steps', 'features_pca.csv')
@@ -16,6 +18,13 @@ def main():
     # On conserve l'identifiant utilisateur si présent
     user_ids = df['user_id'] if 'user_id' in df.columns else None
     X = df.drop(columns=['user_id']) if 'user_id' in df.columns else df
+
+    # Imputation des NaN avec la moyenne de chaque colonne
+    imputer = SimpleImputer(strategy='mean')
+    X = pd.DataFrame(imputer.fit_transform(X), columns=X.columns)
+
+    if user_ids is not None:
+        user_ids = df['user_id']
 
     # PCA : on garde assez de composantes pour expliquer 90% de la variance
     pca = PCA(n_components=0.9, svd_solver='full')
