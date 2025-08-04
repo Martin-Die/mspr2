@@ -40,6 +40,7 @@ mspr2/
   ```bash
   pip install -r requirements.txt
   ```
+- Placer les fichiers de données CSV dans le dossier `datasets/`
 
 ## Exécution du projet
 
