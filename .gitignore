@@ -14,6 +14,10 @@ datasets/*
 extracted_csv/*
 !extracted_csv/.gitkeep
 
+model_ia_steps/exploration_report.txt
+model_ia_steps/features_pca.csv
+model_ia_steps/pca_projection.png
+model_ia_steps/features_normalized.csv
 # ========================================
 # RÉSULTATS ET SORTIES
 # ========================================
