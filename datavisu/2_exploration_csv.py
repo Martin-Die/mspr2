@@ -3,8 +3,8 @@ import pandas as pd
 from pathlib import Path
 
 # Configuration des dossiers
-EXTRACTED_CSV_DIR = 'extracted_csv'
-RESULTS_DIR = 'exploration_results'
+EXTRACTED_CSV_DIR = './extracted_csv'
+RESULTS_DIR = './exploration_results'
 CHUNK_SIZE = 10000  # Nombre de lignes à lire pour l'échantillon
 
 def create_results_directory():
@@ -16,7 +16,8 @@ def list_extracted_csv_files():
     extracted_dir = Path(EXTRACTED_CSV_DIR)
     if not extracted_dir.exists():
         print(f"⚠️ Le dossier {EXTRACTED_CSV_DIR} n'existe pas.")
-        print("Veuillez d'abord exécuter extract.py pour extraire les fichiers compressés.")
+        print("💡 Veuillez d'abord exécuter extract.py pour extraire les fichiers compressés.")
+        print("   Commande : python ./etl_steps/extract.py")
         return []
     
     csv_files = []

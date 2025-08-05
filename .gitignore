@@ -142,3 +142,9 @@ tmp/
 *.pem
 secrets/
 config/secrets.json 
+
+
+analyses_categorielles/
+analyse_complete/
+analyses_statistiques/
+analyses_temporelles/
