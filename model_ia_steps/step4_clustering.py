@@ -22,7 +22,7 @@ def main():
         kmeans = KMeans(n_clusters=k, random_state=42, n_init=10)
         labels = kmeans.fit_predict(X)
         inertias.append(kmeans.inertia_)
-        silhouettes.append(silhouette_score(X, labels))
+        silhouettes.append(silhouette_score(X, labels, sample_size=10000, random_state=42))
     # Affichage des courbes
     plt.figure(figsize=(10,4))
     plt.subplot(1,2,1)
